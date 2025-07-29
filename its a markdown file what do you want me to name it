@@ -1,12 +1,52 @@
-# Data Science Project: Console Prices
+# _Data Science Project: Console Prices_
 
-## Identifying and Defining
+# Identifying and Defining
 
-### Mind Map
+## Mind Map
 
 ![My Mindmap](images\mindmap.png)
-* Blue are ideas considered for longer than others.
+* Blue were ideas considered for longer than others.
 
-### Hypothesis
+## Hypothesis
 
-#### I hypthesise that, despite the common opinion, videogame console prices are as fair as they were 10 years ago, based on production prices and MSRP vs. Inflation.
+#### "Videogame console prices have risen accordingly with inflation, and are as fairly priced as they were 20 years ago."
+
+This includes the following consoles:
+
+| Playstation| Xbox | Nintendo |
+|---|---|---|
+|PS3 (2006)| Xbox 360 (2006) | Wii (2006) |
+|PS4 (2013)| Xbox One (2013)| Wii U (2012) |
+|PS5 (2020) | Xbox Series S (2020) | Switch (2017) |
+|PS5 Pro (2024) | Xbox Series X (2020) | Switch 2 (2025) |
+
+and also maybe the steam deck if I can be bothered.
+
+## Requirements Outline
+
+### Functional Requirements
+
+* #### Loading
+All relevant images or texts should be without error. In case of error, backup methods should be used. If those fail, make the error clear to the user and give the user direction to access data in other ways.
+
+* ####  Cleaning
+System should be able to function with minor values missing, with minimal disruption to user experience. Tools to filter or locate specific data will ideally be included.
+
+* ####  Analysis
+System should be able to provide analysis in the form of means, ranges and other useful tools, especially for comparison.
+
+* #### Visualisation
+Data should be visualised in a variety of pertinent ways, such as graphs, charts, dataframes and more. Particular focus should be given to the visualisation methods' accuracy compared to the spreadsheets.
+
+(update this one with more specific knowledge when you know how to pandas and mpl)
+
+* #### Outputs
+Outputs should be in the form of showing the user's chosen visualisation, text representing specifically filtered data points, or easy access to the spreadsheets and datasets. Dataset will likely be stored in a .csv file.
+
+
+### Non-Functional Requirements
+
+* #### Usability
+User interface should be easily navigable, understandable, and simple, whilst providing all neccesary information. A "README" document should be included to clarify what the data is, suggests, and any other necessary information. Data visualisation methods should have clarity.
+
+* #### Reliability
