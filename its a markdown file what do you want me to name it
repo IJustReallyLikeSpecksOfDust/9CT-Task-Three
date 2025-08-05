@@ -50,3 +50,44 @@ Outputs should be in the form of showing the user's chosen visualisation, text r
 User interface should be easily navigable, understandable, and simple, whilst providing all neccesary information. A "README" document should be included to clarify what the data is, suggests, and any other necessary information. Data visualisation methods should have clarity.
 
 * #### Reliability
+System should be consistently able to access the same data with simple input, mentioned data should have and maintain integrity. System should handle errors without obfuscation, using backup processe(s) and detailed error messages to assist the user
+
+
+### Use Case
+__Actor:__ User
+
+__Goal:__ To access and interact with existing data through the program’s user interface.
+
+__Preconditions:__
+
+* The dataset has already been preloaded into the system by an administrator / programmer.
+
+* The user has access to the system's interface.
+
+__Main Flow:__
+
+User opens the program and is presented with a text-based menu.
+
+User is presented with the following options:
+* a. See visualisation (Charts or graphs)
+* b. Provide criteria to search or filter for data.
+* c. Access the dataset for any reason (typically an update; though other reasons may exist.)
+
+User selects one of the options and system performs the requested action and outputs to user.
+
+__Postconditions:__
+
+User has viewed and/or interacted with the data in any way they choose.
+
+Updates are checked for and saved by the system (if valid).
+
+Data remains available for further queries or analysis, maintaining  data integrity.
+
+
+
+# Researching and Planning
+
+### Research:
+Below is a collection of links I used for research. I guess it's my sources? At least the ones for the paragraph.
+
+### Discuss (SEE-I PAragraph)
