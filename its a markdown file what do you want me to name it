@@ -20,8 +20,6 @@ This includes the following consoles:
 |PS5 (2020) | Xbox Series S (2020) | Switch (2017) |
 |PS5 Pro (2024) | Xbox Series X (2020) | Switch 2 (2025) |
 
-and also maybe the steam deck if I can be bothered.
-
 ## Requirements Outline
 
 ### Functional Requirements
@@ -90,4 +88,38 @@ Data remains available for further queries or analysis, maintaining  data integr
 ### Research:
 Below is a collection of links I used for research. I guess it's my sources? At least the ones for the paragraph.
 
-### Discuss (SEE-I PAragraph)
+
+https://www.visualcapitalist.com/game-console-launch-prices-adjusted-for-inflation-1975-2024/
+
+https://melmagazine.com/en-us/story/why-are-consoles-so-expensive-video-games
+
+https://www.nextpit.com/news/console-gaming-price-hikes
+
+https://au.pcmag.com/gaming-1/97060/microsoft-loses-up-to-200-on-every-xbox-console-sold
+
+### Discuss (SEE-I Paragraph)
+
+A lot of people seem to think that videogame consoles are overpriced, and the natural inferrence most people take is that that means the companies behind them are marking up prices to increase profits, however, most gaming journalism suggests that consoles are sold at a large loss to their manufacturers. Online, a lot of people appear to have the opinion that consoles have become drastically more expensive across about the past decade. While objectively true, this doesn't account for inflation as others point out, and there's another common logic that because console makers get more profit from selling software, whether it be in retailers, through online shops, or subscription services, they keep the console price point tolerable to enable later purchases. This is seen in the modern XBox business model, as Microsoft eat a loss of over a $100 on each Series X/S sold, often more, but they make up for it with the lucrative Xbox game pass, and it's heavy success. However, what gamers see is an increase in price, and from that perspective, it does make sense to assume they're taking profit. It's like any other thing with inflation, when a person sees their favourite pizza place has raised the price of garlic bread 30%, they're obviously going to be disgruntled, yet that doesn't consider that perhaps the wheat industry had hit a tough spot, and it's priced just as accordingly. Though it is important to note that sometimes companies overdo their price raises, using inflation as an excuse, like certain major supermarket chains do.
+
+### Acquiring Data
+
+Note: Assume data needs to be in the time period of 2005-2025 (where applicable).
+#### Data I need:
+- Inflation in general across Australia, Japan & the USA.*
+- Manufacturing costs of common console parts. 
+- Rise in consumer prices of MAIN (sorry PSP) consoles from Sony, Microsoft & Nintendo.**
+- Rise in manufacturing costs of the above consoles.
+
+
+###### *Depending on ease of data acquisition 1 or 2 of the countries can be dropped.
+
+###### **The companies should be seperated to compare between eachother.
+
+These requirements are very malleable depending on the ease of obtaining and using it. Really all that is truly needed is console prices and inflation, in any usable shape or form. 
+
+Data, when found, will have it's source listed beneath this line.
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-
+
+
+### Data Dictionary
