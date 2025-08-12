@@ -120,6 +120,35 @@ These requirements are very malleable depending on the ease of obtaining and usi
 Data, when found, will have it's source listed beneath this line.
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-
+https://www.kaggle.com/code/arthurtok/the-console-wars-ps-vs-xbox-vs-wii#8th-GENERATION-CONSOLE-WAR - data on console sales going to 2015. the creator is a unique character. maybe useful
 
+https://www.kaggle.com/datasets/jaimepazlopes/game-console-manufactor-and-sales/data - data rich on sales of consoles, there is a lot included. Not much on manufacturing and nothing 2019 or further.
+
+https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG - very delicious inflation of consumer prices data, including both global and country-based stuff.
 
 ### Data Dictionary
+I'm not sure HOW you're meant to make these, unsure if it should be a table or a dataframe or a .csv or whatever else, so right now I'll just do this as a table and we can figure the rest out later.
+
+Some notes:
+- I'm using the GPU as a microchosm of the manufacturing costs as a whole, as there's data about them and its often the most expensive part of a console (at least today).
+- USD and AUD are being used out of convinience.
+- I am experiencing issues with sorting out nuances of the CPI rise data. A lot of them...
+- My knowledge of datatypes is limited so I did my best guesses based on example mostly.
+
+
+
+| Field   | Datatype | Display Format | Description | Example | Validation |
+|---|---|---|---|---|---|
+| Console | object | tba | The console whose data is being looked at. | Sega Dreamcast | Any character or number. No other symbols. |
+| Company | object | tba | The videogame company behind the console. | Atari | Unlimited
+| Price (USD) | float64 | NNN | Rounded up consumer price of the console on release, in USD. | 250 | Three numbers with no decimal places. |
+| Price (AUD) | float64 | NNN/NNNN* | Rounded up consumer price of the console on release, in AUD. | 450 | Three or Four numbers with no decimal places. |
+| GPU Price (USD) | float64 | NN/NNN* | Rounded up price of the console's GPU on release, in USD | 170 | Two or three numbers with no decimal places. |
+| Release Date | datetime64 | YYYY-MM-DD | Date where the console released internationally. | 2008-02-29 | Must be in the format of YYYY-MM-DD. |
+| Global CPI rise** | tba | % | Percentage rise in global CPI since the company's last console release. | 11% | An integer percentage. |
+
+*I don't know how to represent different potential amounts of numbers in the display format.
+**Gotta be a more descriptive way to phrase that.
+
+
+# Producing and Implementing
