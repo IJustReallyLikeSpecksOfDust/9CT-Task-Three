@@ -120,17 +120,23 @@ These requirements are very malleable depending on the ease of obtaining and usi
 Data, when found, will have it's source listed beneath this line.
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-
+
 https://www.kaggle.com/code/arthurtok/the-console-wars-ps-vs-xbox-vs-wii#8th-GENERATION-CONSOLE-WAR - data on console sales going to 2015. the creator is a unique character. maybe useful
 
 https://www.kaggle.com/datasets/jaimepazlopes/game-console-manufactor-and-sales/data - data rich on sales of consoles, there is a lot included. Not much on manufacturing and nothing 2019 or further.
 
 https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG - very delicious inflation of consumer prices data, including both global and country-based stuff.
 
+https://www.kaggle.com/datasets/lucasgalanti/home-consoles-and-gaming-sales/data - contains a ton of what I need. 
+
+https://www.nintendolife.com/news/2025/08/switch-2-has-sold-more-than-6-million-units-and-almost-as-many-copies-of-mario-kart-world - used only and exclusively for ns2 sales
+also my only source for the ps5 pro sales is a forum i cant find anymore and my own estimation. so basically it's made up
+
 ### Data Dictionary
 I'm not sure HOW you're meant to make these, unsure if it should be a table or a dataframe or a .csv or whatever else, so right now I'll just do this as a table and we can figure the rest out later.
 
 Some notes:
-- I'm using the GPU as a microchosm of the manufacturing costs as a whole, as there's data about them and its often the most expensive part of a console (at least today).
+- I'm planning on using the GPU as a microchosm of the manufacturing costs as a whole, as there's data about them and its often the most expensive part of a console (at least today).  Update: There is significantly less data about these GPUs than I thought. Alternatives may be used. We'll see.
 - USD and AUD are being used out of convinience.
 - I am experiencing issues with sorting out nuances of the CPI rise data. A lot of them...
 - My knowledge of datatypes is limited so I did my best guesses based on example mostly.
@@ -150,5 +156,6 @@ Some notes:
 *I don't know how to represent different potential amounts of numbers in the display format.
 **Gotta be a more descriptive way to phrase that.
 
+Honestly I will probably redo this later.
 
 # Producing and Implementing
