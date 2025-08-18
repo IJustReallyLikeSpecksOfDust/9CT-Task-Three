@@ -105,7 +105,7 @@ A lot of people seem to think that videogame consoles are overpriced, and the na
 
 Note: Assume data needs to be in the time period of 2005-2025 (where applicable).
 #### Data I need:
-- Inflation in general across Australia, Japan & the USA.*
+- Inflation in general across Australia, Japan & the USA,* or globally.
 - Manufacturing costs of common console parts. 
 - Rise in consumer prices of MAIN (sorry PSP) consoles from Sony, Microsoft & Nintendo.**
 - Rise in manufacturing costs of the above consoles.
@@ -138,7 +138,7 @@ I'm not sure HOW you're meant to make these, unsure if it should be a table or a
 Some notes:
 - I'm planning on using the GPU as a microchosm of the manufacturing costs as a whole, as there's data about them and its often the most expensive part of a console (at least today).  Update: There is significantly less data about these GPUs than I thought. Alternatives may be used. We'll see.
 - USD and AUD are being used out of convinience.
-- I am experiencing issues with sorting out nuances of the CPI rise data. A lot of them...
+- I am experiencing issues with sorting out nuances of the CPI rise data. A lot of them... 
 - My knowledge of datatypes is limited so I did my best guesses based on example mostly.
 
 

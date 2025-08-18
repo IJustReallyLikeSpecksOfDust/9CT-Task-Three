@@ -1,7 +1,8 @@
 #here's the imports
 import pandas as pd
-import matplotlib
+import matplotlib.pyplot
 import random
+import time
 
 #okay first time to define some variables
 thedata = pd.read_csv('data/consdata.csv') #this should be reading the data but i dont know if it is. i'm not getting anything 
@@ -11,6 +12,7 @@ correctpass = 'cheeseburgertempo'
 #print the full dataset
 def fulldataset(): 
     print(thedata)
+    movingon = input('You can type anything here, just input to move on. ')
     #I really have no idea if this is the output I need to give but it took me an embarassing amount of time to figure out that you needed to do it as a print, so I'm going to say this is fine.
 
 #visualisation options. gonna take some time
@@ -19,7 +21,11 @@ def visualisations():
 
 #finds and filters data
 def datafindfilter():
-    print('Function not finished. Sorry.')    
+    print("Alright, let's make a graph.")
+    print('These are the types you can choose: 1. Scatter')
+    graphtype = input('Type the number for your choice here: ')
+    if graphtype == '1':
+        print('Scatter graph, got it. Okay, for the values, what should be on the X axis? Make sure you type something from the csv. ')
 
 #a simple password protection function. usage of global allows it to work between functions if i code this in a good way (with a loop)
 def passwordprotection():
@@ -76,6 +82,7 @@ def ropasc():
         print("What are you, 6? There's no 'Gun' choice in Rock Paper Scissors.")
     else:
         print("Are you stupid? That's not a valid choice, learn to spell! Wait, sorry that was rude, you probably just made a typo...")
+    time.sleep(3)
 
 
 #the other options will be local to main.py

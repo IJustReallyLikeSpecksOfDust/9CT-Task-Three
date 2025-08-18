@@ -1,7 +1,7 @@
 #hey look there's stuff here
 #setup imports and variables and stuff
 import pandas as pd
-import matplotlib
+import matplotlib.pyplot
 import random
 import time
 from data_module import (
