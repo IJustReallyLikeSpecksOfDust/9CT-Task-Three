@@ -5,27 +5,61 @@ import random
 import time
 
 #okay first time to define some variables
-thedata = pd.read_csv('data/consdata.csv') #this should be reading the data but i dont know if it is. i'm not getting anything 
-passwordentered = False
+thedata = pd.read_csv('data/consdata.csv')
+infdata = pd.read_csv('data/infladata.csv')
 correctpass = 'cheeseburgertempo'
 
 #print the full dataset
 def fulldataset(): 
-    print(thedata)
-    movingon = input('You can type anything here, just input to move on. ')
+    whichset = input('Which dataset do you want to see? 1. Console Data; 2. Inflation Data. ')
+    if whichset == '1':
+        print(thedata)
+        movingon = input('You can type anything here, just input to move on. ')
+    elif whichset == '2':
+        print(infdata)
+        movingon = input('You can type anything here, just input to move on. ')
+    else:
+        print('My creator has kinda run out of ideas for these error messages. By the way that input was invalid.')
+
     #I really have no idea if this is the output I need to give but it took me an embarassing amount of time to figure out that you needed to do it as a print, so I'm going to say this is fine.
 
-#visualisation options. gonna take some time
+#visualisation options. gonna take some time. I want to make Scatter graphs, Line graphs that can compare values, and at least one chart of some kind.
+#this is really annoying.
 def visualisations():
-    print('Function not finished. Sorry.')
-
-#finds and filters data
-def datafindfilter():
     print("Alright, let's make a graph.")
     print('These are the types you can choose: 1. Scatter')
     graphtype = input('Type the number for your choice here: ')
     if graphtype == '1':
-        print('Scatter graph, got it. Okay, for the values, what should be on the X axis? Make sure you type something from the csv. ')
+        print('Scatter graph, got it. Okay, for the values, what should be on the X axis? ')
+        xinput = input('Make sure you type something from the console data or inflation data. ').lower
+        if xinput == 'units sold':
+            ecks = thedata['Units sold (million)']
+        else:
+            print("That couldn't be found on the file...")
+        print('Hopefully that went smoothly. Now what should be on the Y axis? ')
+        yinput = input('Again, type something from the console data or inflation data. ').lower
+        if yinput == 'consumer price (usd)':
+            wai = thedata['Consumer Price (USD)']
+        else:
+            print("That couldn't be found on the file...")
+        tinput = input('And the title? ')
+        print('Great! I should be able to handle the rest.')
+        thedata.plot(
+                    kind='scatter',
+                    x=ecks,
+                    y=wai,
+                    color='red'
+                    alpha=0.3,
+                    title='givingup'
+        )
+
+            
+
+
+        
+#finds and filters data
+def datafindfilter():
+    print('Function not finished. Sorry.')
 
 #a simple password protection function. usage of global allows it to work between functions if i code this in a good way (with a loop)
 def passwordprotection():

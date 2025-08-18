@@ -132,6 +132,8 @@ https://www.kaggle.com/datasets/lucasgalanti/home-consoles-and-gaming-sales/data
 https://www.nintendolife.com/news/2025/08/switch-2-has-sold-more-than-6-million-units-and-almost-as-many-copies-of-mario-kart-world - used only and exclusively for ns2 sales
 also my only source for the ps5 pro sales is a forum i cant find anymore and my own estimation. so basically it's made up
 
+https://www.in2013dollars.com/us/inflation/2005?amount=1
+
 ### Data Dictionary
 I'm not sure HOW you're meant to make these, unsure if it should be a table or a dataframe or a .csv or whatever else, so right now I'll just do this as a table and we can figure the rest out later.
 
