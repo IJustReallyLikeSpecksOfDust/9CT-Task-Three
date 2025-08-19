@@ -1,6 +1,6 @@
 #here's the imports
 import pandas as pd
-import matplotlib.pyplot
+import matplotlib.pyplot as plt
 import random
 import time
 
@@ -26,11 +26,12 @@ def fulldataset():
 #visualisation options. gonna take some time. I want to make Scatter graphs, Line graphs that can compare values, and at least one chart of some kind.
 #this is really annoying.
 def visualisations():
-    print("Alright, let's make a graph.")
-    print('These are the types you can choose: 1. Scatter')
+    print(infdata.dtypes)
+    print("Alright, time for a visualisation.")
+    print('These are the options you have. 1. Console Visualisation, 2. Inflation Visualisation, 3. Comparison Visualisation.')
     graphtype = input('Type the number for your choice here: ')
     if graphtype == '1':
-        print('Scatter graph, got it. Okay, for the values, what should be on the X axis? ')
+        """print('Scatter graph, got it. Okay, for the values, what should be on the X axis? ')
         xinput = input('Make sure you type something from the console data or inflation data. ').lower
         if xinput == 'units sold':
             ecks = thedata['Units sold (million)']
@@ -43,15 +44,30 @@ def visualisations():
         else:
             print("That couldn't be found on the file...")
         tinput = input('And the title? ')
-        print('Great! I should be able to handle the rest.')
+        print('Great! I should be able to handle the rest.')"""
         thedata.plot(
-                    kind='scatter',
-                    x=ecks,
-                    y=wai,
-                    color='red'
+                    kind='bar',
+                    x='Console Name',
+                    use_index=True,
+                    y='Consumer Price (AUD)',
+                    color='red',
                     alpha=0.3,
-                    title='givingup'
+                    title='Major Console Prices since 2005'
         )
+        plt.show()
+    elif graphtype == '2':
+        infdata.plot(
+                    kind='line',
+                    x='Year',
+                    use_index=True,
+                    y='USD Value v. 2005',
+                    color='pink',
+                    alpha=0.3,
+                    title='US Inflation since 2005'
+        )
+        plt.show()
+    elif graphtype == '3':
+        #https://www.geeksforgeeks.org/python/plot-multiple-lines-in-matplotlib/
 
             
 
@@ -59,7 +75,7 @@ def visualisations():
         
 #finds and filters data
 def datafindfilter():
-    print('Function not finished. Sorry.')
+    print('')
 
 #a simple password protection function. usage of global allows it to work between functions if i code this in a good way (with a loop)
 def passwordprotection():
@@ -84,11 +100,6 @@ def updatefile():
     if passwordentered == True:
         print('Function not finished. Sorry.')
 
-#this'll either just be a pointless for-fun function or something that works between program uses, depending on if i can make the password write to another document.
-def changepass():
-    passwordprotection()
-    if passwordentered == True:
-        print('Function not finished. Sorry.')
 
 #this exists because I wanted to refresh myself on python coding
 def ropasc():
