@@ -26,7 +26,7 @@ def fulldataset():
 #visualisation options. gonna take some time. I want to make Scatter graphs, Line graphs that can compare values, and at least one chart of some kind.
 #this is really annoying.
 def visualisations():
-    print(infdata.dtypes)
+    #print(infdata.dtypes)
     print("Alright, time for a visualisation.")
     print('These are the options you have. 1. Console Visualisation, 2. Inflation Visualisation, 3. Comparison Visualisation.')
     graphtype = input('Type the number for your choice here: ')
@@ -45,7 +45,7 @@ def visualisations():
             print("That couldn't be found on the file...")
         tinput = input('And the title? ')
         print('Great! I should be able to handle the rest.')"""
-        thedata.plot(
+        thedata.plot( #visual display of prices
                     kind='bar',
                     x='Console Name',
                     use_index=True,
@@ -55,29 +55,87 @@ def visualisations():
                     title='Major Console Prices since 2005'
         )
         plt.show()
-    elif graphtype == '2':
+    elif graphtype == '2': #shows specifically the inflation stats
         infdata.plot(
                     kind='line',
                     x='Year',
                     use_index=True,
                     y='USD Value v. 2005',
                     color='pink',
-                    alpha=0.3,
+                    alpha=1,
                     title='US Inflation since 2005'
         )
         plt.show()
     elif graphtype == '3':
-        #https://www.geeksforgeeks.org/python/plot-multiple-lines-in-matplotlib/
+        infdata.plot(
+                    kind='line',
+                    x='USD Value v. 2005',
+                    use_index=True,
+                    y='Consumer Price of Most Recent Console (USD)',
+                    color='olive',
+                    alpha=1,
+                    title='USD value vs. Console Prices'
+        )
+        plt.show()
+    else:
+        print('That was not among the provided options.')
+
 
             
 
 
         
-#finds and filters data
+#finds and filters data. basically just an interfaced-query.
 def datafindfilter():
-    print('')
-
-#a simple password protection function. usage of global allows it to work between functions if i code this in a good way (with a loop)
+    print("Well, I can show you just the data from one big console player, the data from just one console, or we can find a specific data point.")
+    itineary = input('What would you like to see (1. Console Company, 2. Console, 3. Find a specific data point). ')
+    if itineary == '1':
+        print('(1 = XBox, 2 = Nintendo, 3 = Playstation)')
+        corpo = input("Which company's consoles would you like to see? ")
+        if corpo == '1':
+            print(thedata.iloc[[0,4,7,8],:])
+        elif corpo == '2':
+            print(thedata.iloc[[1,3,6,11],:])
+        elif corpo == '3':
+            print(thedata.iloc[[2,5,9,10],:])
+        else:
+            print("Hey, Maxi here. I am so sick of writing these error messages. Why did I decide to give this thing personality? I have to say 'Bad input' in like 93234 different ways. Pain. ")
+    elif itineary == '2':
+        print('1. XB360, 2. Wii, 3. PS3, 4. Wii U 5. XBOne, 6. PS4, 7. Switch, 8. XBSS, 9. XBSX, 10. PS5, 11. PS5Pro, 12. NS2, 13. Steam Deck')
+        pc = input("Pick from the list above me.")
+        if pc == '1':
+            print(thedata.iloc[0,:]) #it just matches your choice with the one in consdata
+        elif pc == '2':
+            print(thedata.iloc[1,:])
+        elif pc == '3':
+            print(thedata.iloc[2,:])
+        elif pc == '4':
+            print(thedata.iloc[3,:])
+        elif pc == '5':
+            print(thedata.iloc[4,:])
+        elif pc == '6':
+            print(thedata.iloc[5,:])
+        elif pc == '7':
+            print(thedata.iloc[6,:])
+        elif pc == '8':
+            print(thedata.iloc[7,:])
+        elif pc == '9':
+            print(thedata.iloc[8,:])
+        elif pc == '10':
+            print(thedata.iloc[9,:])
+        elif pc == '11':
+            print(thedata.iloc[10,:])
+        elif pc == '12':
+            print(thedata.iloc[11,:])
+        elif pc == '13':
+            print(thedata.iloc[12,:])
+        else:
+            print("Your choice was not among the ones listed above. Maybe you want the iconic: SEGA Dreamcast?")
+            discard = input('Do you want to see Sega Dreamcast data? (Y/N) ') #trolling
+            print('How interesting.')
+        movingon = input('You can type anything here, just input to move on. ')
+            
+#a simple password protection function. usage of global allows it to work between functions if i code this in a good way (with a loop). Semi-finished, but Scrapped.
 def passwordprotection():
     global passwordentered
     global correctpass
@@ -88,13 +146,13 @@ def passwordprotection():
         else:
             print('(Not actually) Sorry to tell you this, but that password is wrong.')
 
-#change values. this seems hard to code
+#change values. this seems hard to code. Scrapped
 def makemods():
     passwordprotection()
     if passwordentered == True:
         print('Function not finished. Sorry.')
 
-#save the things changed by makemods. may just be integrated into makemods.
+#save the things changed by makemods. may just be integrated into makemods. Scrapped
 def updatefile():
     passwordprotection()
     if passwordentered == True:
