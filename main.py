@@ -59,7 +59,7 @@ def UI():
         elif byebye == 4:
             print('The creator got a shiny Regidrago while working on this!')
         elif byebye == 5:
-            print("I really hope Xbox 'Magnus' is the final name, because that is such a cool word.")
+            print("I really hope Xbox 'Magnus' is the final name, because that is SUCH a cool word.")
         elif byebye == 6:
             print('how does the random function do it anyway? gotta be some form of Pseudo-RNG right? I could google it but ehhh')
         elif byebye == 7:

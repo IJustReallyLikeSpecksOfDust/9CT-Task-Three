@@ -139,25 +139,52 @@ I'm not sure HOW you're meant to make these, unsure if it should be a table or a
 
 Some notes:
 - I'm planning on using the GPU as a microchosm of the manufacturing costs as a whole, as there's data about them and its often the most expensive part of a console (at least today).  Update: There is significantly less data about these GPUs than I thought. Alternatives may be used. We'll see.
+- There is significantly more information about manufaturing prices, so that will be used.
 - USD and AUD are being used out of convinience.
-- I am experiencing issues with sorting out nuances of the CPI rise data. A lot of them... 
 - My knowledge of datatypes is limited so I did my best guesses based on example mostly.
+- This has been refurbished late into the project. Still not too reflective of the final dataset, but more fleshed out.
 
 
 
 | Field   | Datatype | Display Format | Description | Example | Validation |
 |---|---|---|---|---|---|
-| Console | object | tba | The console whose data is being looked at. | Sega Dreamcast | Any character or number. No other symbols. |
-| Company | object | tba | The videogame company behind the console. | Atari | Unlimited
+| Console | object | XX...XX | The console whose data is being looked at. | Sega Dreamcast | Any character or number. No other symbols. |
+| Company | object | X...X | The videogame company behind the console. | Atari | Unlimited |
 | Price (USD) | float64 | NNN | Rounded up consumer price of the console on release, in USD. | 250 | Three numbers with no decimal places. |
 | Price (AUD) | float64 | NNN/NNNN* | Rounded up consumer price of the console on release, in AUD. | 450 | Three or Four numbers with no decimal places. |
-| GPU Price (USD) | float64 | NN/NNN* | Rounded up price of the console's GPU on release, in USD | 170 | Two or three numbers with no decimal places. |
-| Release Date | datetime64 | YYYY-MM-DD | Date where the console released internationally. | 2008-02-29 | Must be in the format of YYYY-MM-DD. |
-| Global CPI rise** | tba | % | Percentage rise in global CPI since the company's last console release. | 11% | An integer percentage. |
+| Units sold (million) | float64 | N...N.N | No. Sales of the console, in millions. | 29.0 | One–Three numbers and a decimal place.
+| Manufacturing Price (USD) | float64 | NN/NNN* | Rounded up price of the console's GPU on release, in USD | 170 | Two or three numbers with no decimal places. |
+| Release Year | int64 | NNNN | Year where the console released internationally. | 2008 | Four integers. |
 
 *I don't know how to represent different potential amounts of numbers in the display format.
-**Gotta be a more descriptive way to phrase that.
-
-Honestly I will probably redo this later.
 
 # Producing and Implementing
+
+There's very little to say about this long phase in the markdown. For the code, see main.py and data module.py.
+Visualisations were really difficult to do, I guess.
+Yeah there's nothing to say here. On to...
+
+# Testing and Evaluating
+
+### Test your Analysis
+Here are some of the seemingly accurate results of my program's functions.
+
+#### Visualisation: Console Prices
+
+![Major Console Prices](images\Figure_1_ConsolePrices.jpeg)
+
+Here we see the release price of each major console since 2005, in release order. While there are notable outliers, and the data is certainly influenced by many different factors, there is a trend towards higher prices over time, especially with Nintendo who's prices never fall in the graph. We can also see that Playstation consoles oftentimes release at bery high prices compared to others. XBox have the most consistent prices, with the range between their cheapest and mos texpensive being only about $200.
+
+
+![USA Inflation ](images\Figure_2_US_Inflation.png)
+
+Using the increasing value of a 2005 USD  to track inflation, we see that the increase has been relatively steady, though notably increasing at a heightened rate past 2020. What this means is that the prices have increased by about x1.6, and as such the dollar buys only ~60% of what it used too. United States currency is used because it is the most common currency in global trade, and has a high amount of English-language data on it. The USA is also the largest market for videogame consoles.
+
+
+![Price of Consoles as Inflation increases](images\Figure_3_Prices-as-inflation-rises.png)
+
+Seen here is console prices plotted with the prior inflation data as the time. This shows a relative standardisation for many years, with some drops. When using other data we can see that said drops are mostly Nintendo consoles, and also that the drops have gotten smaller in recent years. The PS5 Pro displays a massive spike in price, which may indicate that the future holds higher prices overall.
+
+#### Filtered Data
+The filter function produces useful data to draw consolusions.
+

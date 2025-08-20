@@ -3,14 +3,17 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import random
 import time
+from PIL import Image
 
 #okay first time to define some variables
 thedata = pd.read_csv('data/consdata.csv')
 infdata = pd.read_csv('data/infladata.csv')
 correctpass = 'cheeseburgertempo'
+hornets = Image.open('images/HollowKnightSilksong.png')
 
 #print the full dataset
 def fulldataset(): 
+    print(thedata.dtypes)
     whichset = input('Which dataset do you want to see? 1. Console Data; 2. Inflation Data. ')
     if whichset == '1':
         print(thedata)
@@ -95,14 +98,14 @@ def datafindfilter():
         if corpo == '1':
             print(thedata.iloc[[0,4,7,8],:])
         elif corpo == '2':
-            print(thedata.iloc[[1,3,6,11],:])
+            print(thedata.iloc[[1,3,6,12],:])
         elif corpo == '3':
-            print(thedata.iloc[[2,5,9,10],:])
+            print(thedata.iloc[[2,5,9,11],:])
         else:
             print("Hey, Maxi here. I am so sick of writing these error messages. Why did I decide to give this thing personality? I have to say 'Bad input' in like 93234 different ways. Pain. ")
     elif itineary == '2':
-        print('1. XB360, 2. Wii, 3. PS3, 4. Wii U 5. XBOne, 6. PS4, 7. Switch, 8. XBSS, 9. XBSX, 10. PS5, 11. PS5Pro, 12. NS2, 13. Steam Deck')
-        pc = input("Pick from the list above me.")
+        print('1. XB360, 2. Wii, 3. PS3, 4. Wii U 5. XBOne, 6. PS4, 7. Switch, 8. XBSS, 9. XBSX, 10. PS5, 11. Steam Deck, 12. PS5Pro, 13. NS2')
+        pc = input("Pick from the list above me. ")
         if pc == '1':
             print(thedata.iloc[0,:]) #it just matches your choice with the one in consdata
         elif pc == '2':
@@ -134,6 +137,14 @@ def datafindfilter():
             discard = input('Do you want to see Sega Dreamcast data? (Y/N) ') #trolling
             print('How interesting.')
         movingon = input('You can type anything here, just input to move on. ')
+    elif itineary == '3':
+        rox = int(input('Input the x number of the datapoint you want to see (0-12). '))
+        coy = int(input('Input the y number of the datapoint you want to see (0-8). '))
+        print(thedata.iloc[rox,coy])
+        movingon = input('You can type anything here, just input to move on. ')
+    else:
+        print("You entered the input incorrectly... Here's a consolation graph.")
+        hornets.show()
             
 #a simple password protection function. usage of global allows it to work between functions if i code this in a good way (with a loop). Semi-finished, but Scrapped.
 def passwordprotection():
@@ -157,7 +168,6 @@ def updatefile():
     passwordprotection()
     if passwordentered == True:
         print('Function not finished. Sorry.')
-
 
 #this exists because I wanted to refresh myself on python coding
 def ropasc():
