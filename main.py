@@ -43,7 +43,14 @@ def UI():
 #    elif what == '6':
 #        changepass()
     elif what == '4':
-        print('A wordy explanation of my person opinion after having done all this. Will be added... when I have done all this')
+        print("The information I gained from my data suggests that largely; console prices have risen accordingly with inflation, and, notably have never taken large profits. " \
+        "Generally, most consoles lingered around $400 for quite some time, though with Nintendo's being lower than XBox and Playstation. In the data for manufacturing prices it's worth noting that margins were quite thin for most consoles, and the data doesn't even " \
+        "show other associated costs like shippng and retailers' cuts. This suggests that the business model used to be more focused around distribution than profit on consoles, and I would argue that that hasn't changed (except the PS5 Pro). " \
+        "The inflation data suggests that the purchasing power of a USD is around x 0.6 weaker than in 2005, and that is around how much the console prices have risen, specifically in recent years, which can likely be accredited " \
+        "to the pandemic. Take Nintendo's prices, the Wii was $250 on release, which multiplied by 1.6 gets to $400. While not exactly the same as the US NS2 Price, it explains a large rise in prices, especially when you again" \
+        " see the manufacturing prices on those two consoles, which is a much larger difference of $240. To illustrate, think of it as a fresh fruit stall. Their most recent plantation cost more due to increased demand,"
+        " and the new trees are taller and thus need more labour to get the apples down. These two factors, among many others, naturally lead to a price increase, and it's the same for consoles with the inflation and manufacturing costs both rising. " \
+        "As such, having conluded my research, I now hold the opinion that videogame consoles like the PS5, Xbox Series X, and Nintendo Switch 2 ARE fairly priced, as were consoles like the Wii and Xbox 360.")
     elif what == '5':
         ropasc()
     elif what == '6':

@@ -85,7 +85,7 @@ Data remains available for further queries or analysis, maintaining  data integr
 
 # Researching and Planning
 
-### Research:
+## Research:
 Below is a collection of links I used for research. I guess it's my sources? At least the ones for the paragraph.
 
 
@@ -97,11 +97,11 @@ https://www.nextpit.com/news/console-gaming-price-hikes
 
 https://au.pcmag.com/gaming-1/97060/microsoft-loses-up-to-200-on-every-xbox-console-sold
 
-### Discuss (SEE-I Paragraph)
+## Discuss (SEE-I Paragraph)
 
 A lot of people seem to think that videogame consoles are overpriced, and the natural inferrence most people take is that that means the companies behind them are marking up prices to increase profits, however, most gaming journalism suggests that consoles are sold at a large loss to their manufacturers. Online, a lot of people appear to have the opinion that consoles have become drastically more expensive across about the past decade. While objectively true, this doesn't account for inflation as others point out, and there's another common logic that because console makers get more profit from selling software, whether it be in retailers, through online shops, or subscription services, they keep the console price point tolerable to enable later purchases. This is seen in the modern XBox business model, as Microsoft eat a loss of over a $100 on each Series X/S sold, often more, but they make up for it with the lucrative Xbox game pass, and it's heavy success. However, what gamers see is an increase in price, and from that perspective, it does make sense to assume they're taking profit. It's like any other thing with inflation, when a person sees their favourite pizza place has raised the price of garlic bread 30%, they're obviously going to be disgruntled, yet that doesn't consider that perhaps the wheat industry had hit a tough spot, and it's priced just as accordingly. Though it is important to note that sometimes companies overdo their price raises, using inflation as an excuse, like certain major supermarket chains do.
 
-### Acquiring Data
+## Acquiring Data
 
 Note: Assume data needs to be in the time period of 2005-2025 (where applicable).
 #### Data I need:
@@ -134,7 +134,7 @@ also my only source for the ps5 pro sales is a forum i cant find anymore and my 
 
 https://www.in2013dollars.com/us/inflation/2005?amount=1
 
-### Data Dictionary
+## Data Dictionary
 I'm not sure HOW you're meant to make these, unsure if it should be a table or a dataframe or a .csv or whatever else, so right now I'll just do this as a table and we can figure the rest out later.
 
 Some notes:
@@ -160,16 +160,14 @@ Some notes:
 
 # Producing and Implementing
 
-There's very little to say about this long phase in the markdown. For the code, see main.py and data module.py.
-Visualisations were really difficult to do, I guess.
-Yeah there's nothing to say here. On to...
+#### There's very little to say about this phase in the markdown. For the code, see main.py and data module.py.
 
 # Testing and Evaluating
 
-### Test your Analysis
+## Test your Analysis
 Here are some of the seemingly accurate results of my program's functions.
 
-#### Visualisation: Console Prices
+### Visualisation: Console Prices
 
 ![Major Console Prices](images\Figure_1_ConsolePrices.jpeg)
 
@@ -185,6 +183,47 @@ Using the increasing value of a 2005 USD  to track inflation, we see that the in
 
 Seen here is console prices plotted with the prior inflation data as the time. This shows a relative standardisation for many years, with some drops. When using other data we can see that said drops are mostly Nintendo consoles, and also that the drops have gotten smaller in recent years. The PS5 Pro displays a massive spike in price, which may indicate that the future holds higher prices overall.
 
-#### Filtered Data
-The filter function produces useful data to draw consolusions.
+### Filtered Data
+The filter function produces useful data to draw conclusions.
 
+![Nintendo's Data](images\Nintendata.png)
+
+![Sony's Data](images\Sonydata.png)
+
+![Microsoft's Data](images\Microsoftdata.png)
+
+
+## Analysis and Conclusion
+
+### The Hypothesis from the beginning:
+#### "Videogame console prices have risen accordingly with inflation, and are as fairly priced as they were 20 years ago."
+
+The information I gained from my data suggests that, largely, console prices have risen accordingly with inflation, and, notably have never taken large profits. Generally, most consoles lingered around $400 for quite some time, though with Nintendo's being lower than XBox and Playstation. In the data for manufacturing prices it's worth noting that margins were quite thin for most consoles, and the data doesn't even show other associated costs like shippng and retailers' cuts. This suggests that the business model used to be more focused around distribution than profit on consoles, and I would argue that that hasn't changed (except the PS5 Pro). The inflation data suggests that the purchasing power of a USD is around x 0.6 weaker than in 2005, and that is around how much the console prices have risen, specifically in recent years, which can likely be accredited to the pandemic. Take Nintendo's prices, the Wii was $250 on release, which multiplied by 1.6 gets to $400. While not exactly the same as the US NS2 Price, it explains a large rise in prices, especially when you again see the manufacturing prices on those two consoles, which is a much larger difference of $240. To illustrate, think of it as a fresh fruit stall. Their most recent plantation cost more due to increased demand, and the new trees are taller and thus need more labour to get the apples down. These two factors, among many others, naturally lead to a price increase, and it's the same for consoles with the inflation and manufacturing costs both rising. As such, having conluded my research, I now hold the opinion that videogame consoles like the PS5, Xbox Series X, and Nintendo Switch 2 ARE fairly priced, as were consoles like the Wii and Xbox 360.
+
+**This conclusion is also included in the program, under function 4.**
+
+
+## Peer Verification
+
+cant do this just yet.
+
+## Evaluation
+
+### Requirements Outline
+
+* #### Loading
+All images, datasets, data in general, and text loads without error, consistently as needed.
+
+* ####  Cleaning
+Tools to filter and locate data were included. System has not had any errors in regards to missing data
+
+* ####  Analysis
+System should be able to provide analysis in the form of means, ranges and other useful tools, especially for comparison.
+
+* #### Visualisation
+Data should be visualised in a variety of pertinent ways, such as graphs, charts, dataframes and more. Particular focus should be given to the visualisation methods' accuracy compared to the spreadsheets.
+
+(update this one with more specific knowledge when you know how to pandas and mpl)
+
+* #### Outputs
+Outputs should be in the form of showing the user's chosen visualisation, text representing specifically filtered data points, or easy access to the spreadsheets and datasets. Dataset will likely be stored in a .csv file.

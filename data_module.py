@@ -13,7 +13,6 @@ hornets = Image.open('images/HollowKnightSilksong.png')
 
 #print the full dataset
 def fulldataset(): 
-    print(thedata.dtypes)
     whichset = input('Which dataset do you want to see? 1. Console Data; 2. Inflation Data. ')
     if whichset == '1':
         print(thedata)
