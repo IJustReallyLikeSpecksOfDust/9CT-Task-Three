@@ -36,8 +36,6 @@ System should be able to provide analysis in the form of means, ranges and other
 * #### Visualisation
 Data should be visualised in a variety of pertinent ways, such as graphs, charts, dataframes and more. Particular focus should be given to the visualisation methods' accuracy compared to the spreadsheets.
 
-(update this one with more specific knowledge when you know how to pandas and mpl)
-
 * #### Outputs
 Outputs should be in the form of showing the user's chosen visualisation, text representing specifically filtered data points, or easy access to the spreadsheets and datasets. Dataset will likely be stored in a .csv file.
 
@@ -205,7 +203,22 @@ The information I gained from my data suggests that, largely, console prices hav
 
 ## Peer Verification
 
-cant do this just yet.
+Benji exchanged with quite a few people as far as I know, including me. I was unsure whether I was supposed to include the feedback I got or the feedback I gave, so I did both.
+
+
+#### My feedback to Benji
+| Plus | Minus | Implication |
+|---|---|---|
+|Easy and simple UI was well-done, making the program navigable. Everything about the visualisations were excellent, communicating data I did not understand in other forms into interesting graphs. Error handling was smart. Special commendations to the year-filtering function, which was inexplicably intriguing. Additionally, the data goes back an entire 75 years. | The UX was somewhat small, especially with my basic understanding of the dataset. While not directly related to the hypothesis, the other stats in the dataset would've been interesting to see visualised. | Overall a fantastic piece of work that allows for a good user experience, with outstanding visualisation functions, which I definitely used somewhat excessively. The data was easy-to-verify, and matches up with the sourced data (though, I don't understand much of it), making for clearly correct and good data, bolstered by a great scale. My only concerns are but minor nitpicks. Clearly a lot of effort was put into this, and it paid off. |
+
+
+#### Benji's feedback to me.
+| Plus | Minus | Implication |
+|---|---|---|
+|It is obvious that a lot of effort was put into this project. The program is very in depth, there are multiple options for everything, like viewing datasets. There are also multiple graphs which help to visualise the data. UX is clean and efficient, and error handling seemed to be sound. | The consumer price index graph is a little hard to understand. Also, there is limited filtering. You can look for a specific data point, however you can't filter the graphs. | The program is overall extremely solid. It is well tailored to experienced users with a good grasp of economics terminology. There is a lot of information packed into this program, and the user experience ensures that even if you are not an expert, there is still useful data to be found. It achieves its aim of showing console prices quite well. Great work. |
+
+
+
 
 ## Evaluation
 
@@ -215,15 +228,31 @@ cant do this just yet.
 All images, datasets, data in general, and text loads without error, consistently as needed.
 
 * ####  Cleaning
-Tools to filter and locate data were included. System has not had any errors in regards to missing data
+Tools to filter and locate specific data were included. System has not had any errors in regards to missing data, but testing indicates that all unrelated functionality remains fine when data is remove.
 
 * ####  Analysis
-System should be able to provide analysis in the form of means, ranges and other useful tools, especially for comparison.
+The system does not have dedicated analysis tools like the ones listed prior, though options to show the data in numerous ways were included for users to interpret information easily.
 
 * #### Visualisation
-Data should be visualised in a variety of pertinent ways, such as graphs, charts, dataframes and more. Particular focus should be given to the visualisation methods' accuracy compared to the spreadsheets.
-
-(update this one with more specific knowledge when you know how to pandas and mpl)
+Data is visualised using several graphs that illustrate it in generally-understandable ways, as well as easily shown in a dataframe. The functions are easily understandable as a whole, and data is represented well.
 
 * #### Outputs
-Outputs should be in the form of showing the user's chosen visualisation, text representing specifically filtered data points, or easy access to the spreadsheets and datasets. Dataset will likely be stored in a .csv file.
+Outputs work without error, clearly responding to user input with anything requested, as well as fun flavour text in parts. Data is stored in well-filed csv files, with other things easily accessible.
+
+
+### Peer Feedback
+
+The feedback I recieved highlighted my program's vast optionality and visualisations, which I found quite good as well, so I think I largely did well in that regard. My UX was well-done, which was a hope of mine, and I myself was worried about the error handling however it seems like it was fine. Supposedly, the filtering was limited, which I agree with as the feature was somewhat last minute, and I think I could improve it by giving it more depth, rather than solely focusing on going by company or console, and I could do to reword the inflation graph. Overall my feedback was positive, boding well and supporting my overall positive outlook on the project.
+
+
+### Project Management
+I'm actually quite proud of myself in regards to the management of this project. From the beginning, I was hardworking every lesson, and I did my best to stick on course. My commit history is quite long now, as I've worked steadily, even if not that quickly. When I began to feel myself falling behind, not out of lack of work but simple roadblocks, I made sure to do enough work at home to catch up, which I've continued lightly as to ensure completion. Modifications to the scope were quite prevalent, as needed, but I was overall able to fulfill most of my goals with a still reasonable amount of time. That being said, having looked at my commits, I did do a LOT in the last week. Not a ridiculous amount, I found it quite easy, but it does look quite bad for me. So, the project management was really good this time, steady, consistent, and I was overall never ahead but rarely behind the expectation. Yippee.
+
+### Data Quality
+My data is, in majority, well-gathered with objective accuracy in almost every field. Some downloaded entries may be outdated, as consdata.csv was originally an online file (it has been heavily modified with far more stuff), which may mean that some data for recent entries are likely from it's creation date. Additionally, certain extremely recent entries, like those for the PS5 Pro and Nintendo Switch 2, were extremely difficult to find information on, especially for things like sales and manufacturing costs, and as such are likely somewhat or totally innacurate. However, I can say with relative certainty that all of the data is unbiased, due to the objectivity of just about every metric used. Almost any given entry can simply be found online, verified by various sources.
+
+### Security and User Experience Improvemtns
+There are ways in which the security and user experience could be improved, though I am happy with the state of both of them. For instance, there was a scrapped password function that would've benefitted security, as passwords are just security 101. The format of the files obviously hurts security, as they are contained without obfuscation in the same folder as the program, and if the data was secretive then this would be horrendous. Overall though, most improvements would be unecessary as this does regard not much else than videogame data. The text-based interface is also well done, with clear communication of inputs, fun flavour text, explanations, and overall easy usage all throughout. Though, more communication of the behind-the-scenes code could be useful to some users, and the UI is obviously limited by the text-based nature, which may make it difficult for certain users to interaact with. Additionally, one major improvement to the functionality would be more customisation of the visualisation and filtering, though that would be hard to make clear for users, as it would require precisely correct inputs on their side. Overall, the UI and security of the program are well-done for what it is, with obvious improvements to be found.
+
+# Wait, is this finally the end?
+###### Yes. Bye.
